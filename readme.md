@@ -1,11 +1,18 @@
 
-------- Description -------
+        Description
+---------------------------
+
 A Django and React web store. Where users can register and post products for sale, and review other users. I plan on integrating Stripe for payment processing.
 
-------- Technology -------
+        Technology
+--------------------------
+
 HTML, CSS, Django, React, Bootstrap, Postgres
 
-------- User Stories -------
+
+        User Stories 
+----------------------------
+
 As a visitor I’d like to browse listed items. I’d also like to register for an account once I find one I’d like to buy.
 
 As a user I’d like to post an item for sale. Never mind I’d like to edit that posting.
@@ -16,12 +23,21 @@ As a merchant I’d like the users to be able to review if I’ve given them goo
 
 As a merchant I’d like users to be able to pay me as seamlessly as possible.
 
-------- Restful Routing -------
+        Restful Routing
+-------------------------------
 
 ![](https://github.com/kubeshauseli17/Project-4/blob/master/restful.png)
 
-------- ERD -------
+        ERD
+-------------------
 
+![](https://github.com/kubeshauseli17/Project-4/blob/master/ERD.png)
+
+
+          Wireframes
+------------------------------
+
+![](https://github.com/kubeshauseli17/Project-4/blob/master/ERD.png)
 ![](https://github.com/kubeshauseli17/Project-4/blob/master/ERD.png)
 
 ------- Daily Breakdown -------
