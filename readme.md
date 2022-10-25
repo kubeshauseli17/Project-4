@@ -37,8 +37,8 @@ As a merchant I’d like users to be able to pay me as seamlessly as possible.
           Wireframes
 ------------------------------
 
-![](https://github.com/kubeshauseli17/Project-4/blob/master/ERD.png)
-![](https://github.com/kubeshauseli17/Project-4/blob/master/ERD.png)
+![](https://github.com/kubeshauseli17/Project-4/blob/master/p4%20homepage.png)
+![](https://github.com/kubeshauseli17/Project-4/blob/master/p4%20item%20page.png)
 
 ------- Daily Breakdown -------
 Tuesday 10-25 – Planning, Researching Django and React together
