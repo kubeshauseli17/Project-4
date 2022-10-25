@@ -16,14 +16,13 @@ As a merchant I’d like the users to be able to review if I’ve given them goo
 
 As a merchant I’d like users to be able to pay me as seamlessly as possible.
 
-------- Restful Routes -------
-‘/’   -   Home
-‘/Register’   -   Register new User
-‘/Login’   -   User Login
-‘/Post_Item’   -   List Users item for sale
-‘/Search’   -   Search items listings
-‘/Item(id)’   -    Display individual listing
-‘/payments’   -    ? not sure exactly Stripes routing
+------- Restful Routing -------
+
+![](https://github.com/kubeshauseli17/Project-4/blob/master/restful.png)
+
+------- ERD -------
+
+![](https://github.com/kubeshauseli17/Project-4/blob/master/ERD.png)
 
 ------- Daily Breakdown -------
 Tuesday 10-25 – Planning, Researching Django and React together
