@@ -1,15 +1,16 @@
-
+----------------------------
         Description
----------------------------
+----------------------------
 
 A Django and React web store. Where users can register and post products for sale, and review other users. I plan on integrating Stripe for payment processing.
 
-        Technology
---------------------------
+----------------------------
+         Technology
+----------------------------
 
 HTML, CSS, Django, React, Bootstrap, Postgres
 
-
+----------------------------
         User Stories 
 ----------------------------
 
@@ -23,28 +24,32 @@ As a merchant I’d like the users to be able to review if I’ve given them goo
 
 As a merchant I’d like users to be able to pay me as seamlessly as possible.
 
+-------------------------------
         Restful Routing
 -------------------------------
 
 ![](https://github.com/kubeshauseli17/Project-4/blob/master/restful.png)
 
+-------------------
         ERD
 -------------------
 
 ![](https://github.com/kubeshauseli17/Project-4/blob/master/ERD.png)
 
-
+------------------------------
           Wireframes
 ------------------------------
 
 ![](https://github.com/kubeshauseli17/Project-4/blob/master/p4%20homepage.png)
 ![](https://github.com/kubeshauseli17/Project-4/blob/master/p4%20item%20page.png)
 
-------- Daily Breakdown -------
+------------------------------
+        Daily Breakdown
+------------------------------
 Tuesday 10-25 – Planning, Researching Django and React together
 Wednesday 10-26 – Django Day (Get my backend working)
 Thursday 10-27 --  React Day (Get React linked up and happy with my backend)
 Friday 10-28 – Stripe and API day
 Saturday 10-29 – Bug solving day
 Sunday 10-30 – Bug solving day / Styling / Adding depth
-Monday 10-31 Anxiety Day (Trick or Treating after class)
+Monday 10-31 Anxiety Day   
