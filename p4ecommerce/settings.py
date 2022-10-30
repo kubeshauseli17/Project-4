@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'semantic_admin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -161,4 +162,4 @@ EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
 # Stripe configuration
 STRIPE_PUBLIC_KEY = config('STRIPE_PUBLIC_KEY')
 STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')
-STRIPE_WEBHOOK_SECRET = ""
+STRIPE_WEBHOOK_SECRET = ('STRIPE_WEBHOOK_SECRET')
