@@ -17,9 +17,9 @@ I want to add Stripe and Apple Pay sometime soon to round out the payments accep
 ----------------------------
 
 I really wish I hadn't killed my old laptop with an inadvertant coffee spill on night 1. That was a expensive and painful mistake with this project.
-For as much as I got done on this project I still feel I am behind where i was hoping to be at this point. I'm going to polish this project up and add 
+For as much as I got done on this project I still feel I am behind where I was hoping to be at this point. I'm going to polish this project up and add 
 to it once this cohort is over. I think all things considered at least it's currently functional. Albeit not exactly like I was hoping and not as stylized 
-as I would've liked.
+as I would've liked. Longer term I would like to migrate over to Postgres as well.
 
 ----------------------------
          Technology
@@ -41,11 +41,38 @@ As a merchant I’d like the users to be able to review if I’ve given them goo
 
 As a merchant I’d like users to be able to pay me as seamlessly as possible.
 
--------------------------------
-        Restful Routing
--------------------------------
 
-![](https://github.com/kubeshauseli17/Project-4/blob/master/restful.png)
+------------------------------
+        Installation
+------------------------------
+
+- Clone the repository - git clone https://github.com/kubeshauseli17/Project-4.git
+
+- Navigrate to the working directory
+
+- Create virtual environment - python3 -m venv venv
+
+- Activate the virtual environment - source .venv/bin/activate
+
+- Install required packages - pip install -r requirements.txt
+
+- Create environment variables in a .env file
+
+SECRET_KEY=(Paypal Developer Secret key)
+DEBUG=True
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_HOST_USER=emailaddress@gmail.com
+EMAIL_HOST_PASSWORD=yourPassword
+EMAIL_USE_TLS=True
+
+- Create Database - python3 manage.py migrate
+
+- Create Super User - python3 manage.py createsuperuser
+
+- Run Server - python manage.py runserver
+
+- Login as Admin - (http://127.0.0.1:8000/securelogin/)
 
 -------------------
         ERD
