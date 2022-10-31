@@ -47,8 +47,8 @@ class VariationManager(models.Manager):
 
 variation_category_choice = (
     ('color', 'color'),
-    ('console', 'console'),
-    ('type', 'type')
+    ('mod', 'mod'),
+    ('type', 'type'),
 )
 
 class Variation(models.Model):
