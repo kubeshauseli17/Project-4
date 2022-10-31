@@ -1,16 +1,10 @@
 @charset "UTF-8";
-/* ==== BASE STYLES ====*/
-/* ==================== GLOBAL STYLES ======================= */
 @import url("https://rsms.me/inter/inter.css");
 html {
   font-family: "Inter", sans-serif;
   font-size: 15px;
 }
 
-/* ========================
-INCLUDE STYLES AND COMPONENTS
-===================== */
-/* ================== HELPERS  =================== */
 a:hover {
   text-decoration: none;
 }
@@ -37,7 +31,6 @@ a:hover {
   padding: 2rem 2.3rem;
 }
 
-/* =================  DEFINED VARIABLES =================== */
 .icon-xs, .icon-sm, .icon-md, .icon-lg {
   display: inline-block;
   text-align: center;
@@ -155,7 +148,6 @@ a:hover {
   transform: scaleX(1);
 }
 
-/* ============== spacing ============== */
 .padding-y {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -226,7 +218,6 @@ article:after,
   content: "";
 }
 
-/* -------------------- small grid gutter --------------------- */
 .row-sm {
   margin-right: -7px;
   margin-left: -7px;

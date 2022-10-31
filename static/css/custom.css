@@ -11,7 +11,7 @@
   .rate > label{
     float: right;
   }
-  
+
   /* Showing the stars */
   .rate > label:before{
     display: inline-block;
@@ -32,17 +32,17 @@
   
   /* Click and hover */
   input:checked ~ label, label:hover ~ label{
-    color: #ffb503;
+    color: #DBC87Dff;
   }
   
   /* hover hightlight */
   input:checked + label:hover, input:checked ~ label:hover,input:checked ~ label:hover ~ label,
   label:hover ~ input:checked ~ label{
-    color: #cc9000;
+    color: #DBC87Dff;
   }
   
   .rating-star i{
-    color: #ffb503 !important;
+    color: #DBC87Dff !important;
   }
   
   ul.thumb{

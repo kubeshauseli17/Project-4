@@ -4,11 +4,11 @@
 <section class="section-pagetop bg">
 	<div class="container">
 		{% if 'search' in request.path %}
-		<h2 class="title-page">Search Results</h2>
+		<h2 class="title-page d-flex justify-content-center">Search Results</h2>
 		{% elif category %}
-		<h2 class="title-page">{{ category }}</h2>
+		<h2 class="title-page d-flex justify-content-center">{{ category }}</h2>
 		{% else %}
-		<h2 class="title-page">Our Store</h2>
+		<h2 class="title-page d-flex justify-content-center">Our Store</h2>
 		{% endif %}
 	</div> <!-- container //  -->
 </section>
