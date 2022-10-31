@@ -33,6 +33,7 @@ def store(request, category_slug=None):
     context = {
         'products'     : paged_products,
         'product_count': product_count,
+        'category'     : categories,
     }
     return render(request, 'store/store.html', context)
 

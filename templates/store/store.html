@@ -2,54 +2,26 @@
 {% load static %}
 
 {% block content %}
-<!-- ========================= SECTION PAGETOP ========================= -->
 <section class="section-pagetop bg">
 <div class="container">
 	{% if 'search' in request.path %}
-		<h2 class="title-page">Search Result</h2>
+		<h2 class="title-page">Search Results</h2>
+	{% elif category %}
+		<h2 class="title-page">{{ category }}</h2>
 	{% else %}
-		<h2 class="title-page">Our Store</h2>
+	<h2 class="title-page">Our Store</h2>
 	{% endif %}
 
 </div> <!-- container //  -->
 </section>
-<!-- ========================= SECTION INTRO END// ========================= -->
 
-<!-- ========================= SECTION CONTENT ========================= -->
 <section class="section-content padding-y">
 <div class="container">
 
 <div class="row">
-	<aside class="col-md-3">
+	<main class="col-lg-12">
 
-<div class="card">
-	<article class="filter-group">
-		<header class="card-header">
-			<a href="#" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" class="">
-				<i class="icon-control fa fa-chevron-down"></i>
-				<h6 class="title">Categories</h6>
-			</a>
-		</header>
-		<div class="filter-content collapse show" id="collapse_1" style="">
-			<div class="card-body">
-
-				<ul class="list-menu">
-					<li><a href="{% url 'store' %}">All Products  </a></li>
-					{% for category in links %}
-				<li><a href="{{ category.get_url }}">{{ category.category_name }}  </a></li>
-					{% endfor %}
-				</ul>
-
-			</div> <!-- card-body.// -->
-		</div>
-	</article> <!-- filter-group  .// -->
-
-</div> <!-- card.// -->
-
-	</aside> <!-- col.// -->
-	<main class="col-md-9">
-
-<header class="border-bottom mb-4 pb-3">
+<header class="border-bottom mb-4 pb-4">
 		<div class="form-inline">
 			<span class="mr-md-auto"><b>{{ product_count }}</b> items found </span>
 
@@ -118,6 +90,4 @@
 
 </div> <!-- container .//  -->
 </section>
-<!-- ========================= SECTION CONTENT END// ========================= -->
-
 {% endblock %}
