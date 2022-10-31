@@ -11,6 +11,7 @@ A Django based web store. Where users can register buy products and review their
 I'd love to add functionality so that people could register and create their own store fronts and start selling products seamlessly. 
 I was only able to get a simple e-com site together at this point so I chose to flush out a page I'd like to have someday. 
 I want to add Stripe and Apple Pay sometime soon to round out the payments accepted. 
+I also want to dial in the styling more to really make this shine
 
 ----------------------------
         Reflections
