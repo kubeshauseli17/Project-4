@@ -3,7 +3,7 @@
 ----------------------------
 
 A Django based web store. Where users can register buy products and review their purcahse. I integrated Paypal for payments. 
-
+[https://github.com/kubeshauseli17/Project-4]
 ----------------------------
         Stretch Goals
 ----------------------------
