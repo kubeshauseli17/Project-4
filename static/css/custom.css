@@ -61,10 +61,7 @@
   }
 
   /* Logo */
-/* 
-  .navbar-brand .logo{
-    max-height: 80px !important;
-    max-height: 160px !important;
-    margin-right: 7px;
-    display: inline-block;
-  } */
+
+  .containernav{
+    background-color: #757575;
+  }
