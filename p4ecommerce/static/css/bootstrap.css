@@ -551,6 +551,7 @@ pre code {
   padding-left: 10px;
   margin-right: auto;
   margin-left: auto;
+  color: #DBC87Dff !important;
 }
 @media (min-width: 576px) {
   .container {
@@ -579,6 +580,7 @@ pre code {
   padding-left: 10px;
   margin-right: auto;
   margin-left: auto;
+  color: #DBC87Dff !important;
 }
 
 .row {
