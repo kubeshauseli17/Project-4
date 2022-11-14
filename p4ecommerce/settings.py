@@ -26,7 +26,8 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=True, cast=bool) # True
 
 ALLOWED_HOSTS = [
-'Project-4-env.eba-zjm375jj.us-west-1.elasticbeanstalk.com'  
+'Project-4-env.eba-zjm375jj.us-west-1.elasticbeanstalk.com',
+'127.0.0.1',
 ]
 
 # Application definition
