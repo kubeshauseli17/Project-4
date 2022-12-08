@@ -1,1 +1,1 @@
-web: gunicorn <p4ecommerce>.wsgi --log-file -
+web: gunicorn p4ecommerce.wsgi --log-file -
