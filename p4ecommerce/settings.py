@@ -27,14 +27,14 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=True, cast=bool) # True
 
 ALLOWED_HOSTS = [
-    'eb-venv.eba-e7gmx7dk.us-west-2.elasticbeanstalk.com',
     '127.0.0.1',
-    '*',
+    '.herokuapp.com',
 ]
 
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'semantic_admin',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -53,6 +53,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -90,26 +91,26 @@ WSGI_APPLICATION = 'p4ecommerce.wsgi.application'
 
 AUTH_USER_MODEL = 'accounts.Account'
 
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-# if 'RDS_DB_NAME' in os.environ:
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.postgresql',
-#             'NAME': os.environ['RDS_DB_NAME'],
-#             'USER': os.environ['RDS_USERNAME'],
-#             'PASSWORD': os.environ['RDS_PASSWORD'],
-#             'HOST': os.environ['RDS_HOSTNAME'],
-#             'PORT': os.environ['RDS_PORT'],
-#         }
-#     }
-# else:
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'p4ecommerce',
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
+Database
+https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+if 'RDS_DB_NAME' in os.environ:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.environ['RDS_DB_NAME'],
+            'USER': os.environ['RDS_USERNAME'],
+            'PASSWORD': os.environ['RDS_PASSWORD'],
+            'HOST': os.environ['RDS_HOSTNAME'],
+            'PORT': os.environ['RDS_PORT'],
+        }
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'p4ecommerce',
+            'USER': config('DB_USER'),
+            'PASSWORD': config('DB_PASSWORD'),
     }
 }
 
