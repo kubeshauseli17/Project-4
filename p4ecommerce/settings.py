@@ -29,7 +29,7 @@ DEBUG = config('DEBUG', default=True, cast=bool) # True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'http://p4-ecommerce.herokuapp.com',
+    'p4-ecommerce.herokuapp.com',
 ]
 
 # Application definition
@@ -188,9 +188,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [
-    'p4ecommerce/static',
-]
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
 
 # media files configuration
 MEDIA_URL = '/media/'
