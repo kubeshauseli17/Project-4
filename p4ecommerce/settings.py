@@ -29,7 +29,7 @@ DEBUG = config('DEBUG', default=True, cast=bool) # True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'p4-ecommerce.herokuapp.com',
+    'http://p4-ecommerce.herokuapp.com',
 ]
 
 # Application definition
