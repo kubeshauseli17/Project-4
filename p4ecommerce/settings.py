@@ -40,8 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -111,7 +109,44 @@ WHITENOISE_USE_FINDERS = True
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
+# Absolute path to the directory that holds media.
+# Example: "/home/media/media.lawrence.com/static/"
+STATICFILES_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = STATICFILES_ROOT
+
+# URL that handles the static files served from STATICFILES_ROOT.
+# Example: "http://static.lawrence.com/", "http://example.com/static/"
+STATICFILES_URL = '/static/'
+STATIC_URL = STATICFILES_URL
+
+# URL prefix for admin media -- CSS, JavaScript and images.
+# Make sure to use a trailing slash.
+# Examples: "http://foo.com/static/admin/", "/static/admin/".
+ADMIN_MEDIA_PREFIX = '/static/admin/'
+
+# A list of locations of additional static files
+STATICFILES_DIRS = (
+    (os.path.join(BASE_DIR, 'static'),),
+)
+STATIC_DIRS = STATICFILES_DIRS
+
+# List of finder classes that know how to find static files in
+# various locations.
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+)
+STATIC_FINDERS= STATICFILES_FINDERS
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.1/howto/static-files/
+
+# media files configuration
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR /'media'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -184,17 +219,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
-
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-
-# media files configuration
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR /'media'
 
 from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
