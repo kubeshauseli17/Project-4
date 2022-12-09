@@ -212,3 +212,7 @@ EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
 STRIPE_PUBLIC_KEY = config('STRIPE_PUBLIC_KEY')
 STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')
 STRIPE_WEBHOOK_SECRET = ('STRIPE_WEBHOOK_SECRET')
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
