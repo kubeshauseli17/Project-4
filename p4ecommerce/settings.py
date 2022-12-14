@@ -143,10 +143,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = "os.path.join(BASE_DIR, 'staticfiles')"
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'staticfiles'),)
-STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_SECRET_ACCESS_KEY_ID = config('AWS_SECRET_ACCESS_KEY_ID')
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
+AWS_QUERYSTRING_AUTH = False
 
 # SMTP configuration
 EMAIL_HOST = config('EMAIL_HOST')
