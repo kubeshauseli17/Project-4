@@ -183,21 +183,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/staticfiles/'
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_URL = '/static/'
+STATIC_ROOT = "os.path.join(BASE_DIR, 'staticfiles')"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'staticfiles'),)
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 WHITENOISE_USE_FINDERS = True
-
-# media files configuration
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR /'media'
-
-from django.contrib.messages import constants as messages
-MESSAGE_TAGS = {
-    messages.ERROR: 'danger',
-}
 
 # SMTP configuration
 EMAIL_HOST = config('EMAIL_HOST')
