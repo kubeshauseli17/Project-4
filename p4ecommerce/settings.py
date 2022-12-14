@@ -186,7 +186,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = "os.path.join(BASE_DIR, 'staticfiles')"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'staticfiles'),)
-STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'public/static/public/images')
 
 WHITENOISE_USE_FINDERS = True
 
