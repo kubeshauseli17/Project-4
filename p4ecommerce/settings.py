@@ -144,7 +144,7 @@ USE_TZ = True
 
 
 STATICFILES_DIRS = [
-    'p4-ecommerce/static',
+    'p4-ecommerce/static/',
 ]
 
 STATIC_URL = 'https://p4-ecommerce.s3.us-west-2.amazonaws.com/static/'
