@@ -147,7 +147,7 @@ STATICFILES_DIRS = [
     'p4-ecommerce/static/',
 ]
 
-STATIC_URL = 'p4-ecommerce.s3.us-west-2.amazonaws.com/static'
+STATIC_URL = config('STATIC_URL')
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_SECRET_ACCESS_KEY_ID = config('AWS_SECRET_ACCESS_KEY_ID')
@@ -155,7 +155,7 @@ AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
 AWS_QUERYSTRING_AUTH = False
 
-AWS_S3_CUSTOM_DOMAIN = 'p4-ecommerce.s3.us-west-2.amazonaws.com'
+AWS_S3_CUSTOM_DOMAIN = config('AWS_S3_CUSTOM_DOMAIN')
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
 }
