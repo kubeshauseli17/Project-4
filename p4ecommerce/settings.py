@@ -161,7 +161,7 @@ AWS_S3_OBJECT_PARAMETERS = {
 }
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = 'public-read'
-AWS_LOCATION = 'static'
+
 
 # SMTP configuration
 EMAIL_HOST = config('EMAIL_HOST')
