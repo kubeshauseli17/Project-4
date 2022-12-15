@@ -147,7 +147,7 @@ STATICFILES_DIRS = [
     'p4-ecommerce/static',
 ]
 
-STATIC_URL = 'https://p4-ecommerce.s3.us-west-2.amazonaws.com/static'
+STATIC_URL = 'https://p4-ecommerce.s3.us-west-2.amazonaws.com/static/'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_SECRET_ACCESS_KEY_ID = config('AWS_SECRET_ACCESS_KEY_ID')
