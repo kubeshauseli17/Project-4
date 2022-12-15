@@ -1,1 +1,0 @@
-web: gunicorn p4ecommerce.wsgi --log-file -
