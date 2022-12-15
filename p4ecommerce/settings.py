@@ -147,12 +147,12 @@ STATICFILES_DIRS = [
     'p4-ecommerce/static/',
 ]
 
-STATIC_URL = process.env.STATIC_URL
+STATIC_URL = os.environ.get('STATIC_URL')
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-AWS_SECRET_ACCESS_KEY_ID = process.env.AWS_SECRET_ACCESS_KEY_ID
-AWS_ACCESS_KEY_ID = process.env.AWS_ACCESS_KEY_ID
-AWS_STORAGE_BUCKET_NAME = process.env.AWS_STORAGE_BUCKET_NAME
+AWS_SECRET_ACCESS_KEY_ID = os.environ.get('AWS_SECRET_ACCESS_KEY_ID')
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 AWS_QUERYSTRING_AUTH = False
 
 AWS_S3_CUSTOM_DOMAIN = process.env.AWS_S3_CUSTOM_DOMAIN
@@ -167,8 +167,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR /'media'
 
 # SMTP configuration
-EMAIL_HOST = process.env.EMAIL_HOST
-EMAIL_PORT = process.env.EMAIL_PORT
-EMAIL_HOST_USER = process.env.EMAIL_HOST_USER
-EMAIL_HOST_PASSWORD = process.env.EMAIL_HOST_PASSWORD
-EMAIL_USE_TLS = process.env.EMAIL_USE_TLS
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_PORT = os.environ.get('EMAIL_PORT')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
