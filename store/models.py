@@ -11,7 +11,7 @@ class Product(models.Model):
     slug            = models.SlugField(max_length=200, unique=True)
     description     = models.TextField(max_length=5000, blank=True)
     price           = models.IntegerField()
-    images          = models.FileField(upload_to='media/products')
+    images          = models.FileField(upload_to='media/products', blank=True)
     stock           = models.IntegerField()
     is_available    = models.BooleanField(default=True)
     category        = models.ForeignKey(Category, on_delete=models.CASCADE)
@@ -84,7 +84,7 @@ class ReviewRating(models.Model):
 
 class ProductGallery(models.Model):
     product = models.ForeignKey(Product, default=None, on_delete=models.CASCADE)
-    image   = models.FileField(upload_to='media/products')
+    image   = models.FileField(upload_to='media/products', blank=True)
 
     def __str__(self):
         return self.product.product_name
